@@ -13,7 +13,7 @@ col1,col2 = st.columns([2,1])
 with col1:
   st.video('./video-0.mp4')
   st.header('',divider='red')
-  c1,c2,c3,c4,c5,c6,c7 = st.columns([2,1,1,2,1,1,2])
+  c1,c2,c3,c4,c5,c6,c7 = st.columns([2.5,0.5,1,2,0.5,1,2])
   with c1:
     st.image('./qr.png')
   with c3:
