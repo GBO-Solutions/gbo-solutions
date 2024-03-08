@@ -13,6 +13,17 @@ col1,col2 = st.columns([2,1])
 with col1:
   st.video('./video-0.mp4')
   st.header('',divider='red')
+  c1,c2,c3,c4,c5,c6,c7 = st.columns([3,1,1,2,1,1,2])
+  with c1:
+    st.image('./qr.png')
+  with c2:
+    st.image('./email.png')
+    st.image('./linkedin.png')
+    st.image('./ytube.png')
+  with c3:
+    st.write('gbosolut@gmail.com')
+    st.write('gbo-solutions')
+    st.write('@GBO-Solutions')
 with col2:
   # SIMPLEX
   c1,c2,c3 = st.columns([1,1,1])
