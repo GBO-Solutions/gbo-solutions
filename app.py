@@ -14,6 +14,7 @@ with col1:
   st.video('./video-0.mp4')
   st.divider()
 with col2:
+  # SIMPLEX
   c1,c2,c3 = st.columns([1,1,1])
   with c2:
     st.subheader(':red[SIMPLEX]')
@@ -22,4 +23,14 @@ with col2:
     st.button(':film_projector: :red[watch]',key='simplex1',use_container_width=True)
   with c2:
     st.button(':lock: :red[download]',key='simplex2',disabled=True,use_container_width=True)
+  st.divider()
+  # B-F-G-S
+  c1,c2,c3 = st.columns([1,1,1])
+  with c2:
+    st.subheader(':red[B-F-G-S]')
+  c1,c2 = st.columns([1,1])
+  with c1:
+    st.button(':film_projector: :red[watch]',key='bfgs1',use_container_width=True)
+  with c2:
+    st.button(':lock: :red[download]',key='bfgs2',disabled=True,use_container_width=True)
   st.divider()
