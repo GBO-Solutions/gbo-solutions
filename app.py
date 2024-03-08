@@ -53,4 +53,3 @@ with col2:
     st.button(':film_projector: :red[watch]',key='Wadjoint',use_container_width=True)
   with c2:
     st.button(':lock: :red[download]',key='Badjoint',disabled=True,use_container_width=True)
-  st.divider()
