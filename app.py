@@ -18,20 +18,28 @@ with col1:
     st.image('./qr.png')
   with c3:
     st.image('./email.png')
+    st.image('')
     st.image('./linkedin.png')
+    st.image('')
     st.image('./ytube.png')
   with c4:
-    st.write('gbosolut@gmail.com')
-    st.write('gbo-solutions')
-    st.write('@GBO-Solutions')
+    st.write(':red[gbosolut@gmail.com]')
+    st.write('')
+    st.write(':red[gbo-solutions]')
+    st.write('')
+    st.write(':red[@GBO-Solutions]')
   with c6:
     st.image('x.png')
+    st.write('')
     st.image('instagram.png')
+    st.write('')
     st.image('tiktok.png')
   with c7:
-    st.write('@gbo_solut')
-    st.write('@gbo_solutions')
-    st.write('@gbo_solut')
+    st.write(':red[@gbo_solut]')
+    st.write('')
+    st.write(':red[@gbo_solutions]')
+    st.write('')
+    st.write(':red[@gbo_solut]')
 with col2:
   # SIMPLEX
   c1,c2,c3 = st.columns([1,1,1])
