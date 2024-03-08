@@ -12,7 +12,7 @@ st.title('')
 col1,col2 = st.columns([2,1])
 with col1:
   st.video('./video-0.mp4')
-  st.divider()
+  st.header('',divider='red')
 with col2:
   # SIMPLEX
   c1,c2,c3 = st.columns([1,1,1])
