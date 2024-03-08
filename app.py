@@ -16,11 +16,11 @@ with col1:
   c1,c2,c3,c4,c5,c6,c7 = st.columns([3,1,1,2,1,1,2])
   with c1:
     st.image('./qr.png')
-  with c2:
+  with c3:
     st.image('./email.png')
     st.image('./linkedin.png')
     st.image('./ytube.png')
-  with c3:
+  with c4:
     st.write('gbosolut@gmail.com')
     st.write('gbo-solutions')
     st.write('@GBO-Solutions')
