@@ -18,9 +18,9 @@ with col1:
     st.image('./qr.png')
   with c3:
     st.image('./email.png')
-    st.image('')
+    st.write('')
     st.image('./linkedin.png')
-    st.image('')
+    st.write('')
     st.image('./ytube.png')
   with c4:
     st.write(':red[gbosolut@gmail.com]')
