@@ -22,4 +22,4 @@ with col2:
     st.button(':film_projector: :red[watch]',key='simplex1',use_container_width=True)
   with c2:
     st.button(':lock: :red[download]',key='simplex2',disabled=True,use_container_width=True)
-  
+  st.divider()
