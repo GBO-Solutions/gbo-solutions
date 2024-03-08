@@ -5,7 +5,7 @@ c1,c2 = st.columns([1,5])
 with c1:
   st.image('./logo.png')
 with c2:
-  st.title(':red[The immediate enemy of the good is the better and its existential enemy is the optimum...]')
+  st.title(':red[The immediate enemy of the Good is the Better and its existential enemy is the Optimum...]')
 st.header('',divider='red')
 st.title('')
 
@@ -18,9 +18,7 @@ with col1:
     st.image('./qr.png')
   with c3:
     st.image('./email.png')
-#    st.write('')
     st.image('./linkedin.png')
-#    st.write('')
     st.image('./ytube.png')
   with c4:
     st.write(':red[gbosolut]'+':red[@gmail.com]')
@@ -30,9 +28,7 @@ with col1:
     st.write(':red[@GBO-Solutions]')
   with c6:
     st.image('x.png')
-#    st.write('')
     st.image('instagram.png')
-#    st.write('')
     st.image('tiktok.png')
   with c7:
     st.write(':red[@gbo_solut]')
