@@ -20,7 +20,7 @@ with col1:
     st.image('./email.png')
 #    st.write('')
     st.image('./linkedin.png')
-3    st.write('')
+#    st.write('')
     st.image('./ytube.png')
   with c4:
     st.write(':red[gbosolut@gmail.com]')
