@@ -23,7 +23,7 @@ with col1:
 #    st.write('')
     st.image('./ytube.png')
   with c4:
-    st.write(':red[gbosolut]':red'[@gmail.com]')
+    st.write(':red[gbosolut]'+:red'[@gmail.com]')
     st.write('')
     st.write(':red[gbo-solutions]')
     st.write('')
