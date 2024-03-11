@@ -6,7 +6,7 @@ with c1:
   st.image('./logo.png')
 with c2:
   title = '''The immediate enemy of the Good is the Better
-             and its existential enemy is the Optimum...'''
+  and its existential enemy is the Optimum...'''
   st.title(title)
 st.header('',divider='red')
 st.title('')
