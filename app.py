@@ -38,7 +38,7 @@ with col1:
     st.write(':red[@gbo_solut]')
 with col2:
   # SIMPLEX
-  c1,c2,c3 = st.columns([1.5,1,1.5])
+  c1,c2,c3 = st.columns([1.25,1,1.25])
   with c2:
     st.subheader(':red[SIMPLEX]')
   c1,c2 = st.columns([1,1])
