@@ -38,7 +38,7 @@ with col1:
     st.write(':red[@gbo_solut]')
 with col2:
   # SIMPLEX
-  c1,c2,c3 = st.columns([1.25,1,1.25])
+  c1,c2,c3 = st.columns([5,4,5])
   with c2:
     st.subheader(':red[SIMPLEX]')
   c1,c2 = st.columns([1,1])
@@ -48,7 +48,7 @@ with col2:
     st.button(':lock: :red[download]',key='Bsimplex',disabled=True,use_container_width=True)
   st.divider()
   # B-F-G-S
-  c1,c2,c3 = st.columns([1,1,1])
+  c1,c2,c3 = st.columns([5,4,5])
   with c2:
     st.subheader(':red[B-F-G-S]')
   c1,c2 = st.columns([1,1])
@@ -58,7 +58,7 @@ with col2:
     st.button(':lock: :red[download]',key='Bbfgs',disabled=True,use_container_width=True)
   st.divider()
     # GENETIC
-  c1,c2,c3 = st.columns([1,1,1])
+  c1,c2,c3 = st.columns([5,4,5])
   with c2:
     st.subheader(':red[GENETIC]')
   c1,c2 = st.columns([1,1])
@@ -68,7 +68,7 @@ with col2:
     st.button(':lock: :red[download]',key='Bgenetic',disabled=True,use_container_width=True)
   st.divider()
     # ADJOINT
-  c1,c2,c3 = st.columns([1,1,1])
+  c1,c2,c3 = st.columns([5,4,5])
   with c2:
     st.subheader(':red[ADJOINT]')
   c1,c2 = st.columns([1,1])
