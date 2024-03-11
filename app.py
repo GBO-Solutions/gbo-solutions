@@ -43,9 +43,9 @@ with col2:
     st.subheader(':red[SIMPLEX]')
   c1,c2 = st.columns([1,1])
   with c1:
-    st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wsimplex',use_container_width=True)
+    st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wsimplex',disabled=True,use_container_width=True)
   with c2:
-    st.button(':lock: :red[download] :pick::',key='Bsimplex',disabled=True,use_container_width=True)
+    st.button(':lock: :red[download] :hammer_and_wrench:',key='Bsimplex',disabled=True,use_container_width=True)
   st.divider()
   # B-F-G-S
   c1,c2,c3 = st.columns([5,4,5])
@@ -53,9 +53,9 @@ with col2:
     st.subheader(':red[B-F-G-S]')
   c1,c2 = st.columns([1,1])
   with c1:
-    st.button(':film_projector: :red[watch]',key='Wbfgs',use_container_width=True)
+    st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wbfgs',disabled=True,use_container_width=True)
   with c2:
-    st.button(':lock: :red[download]',key='Bbfgs',disabled=True,use_container_width=True)
+    st.button(':lock: :red[download] :hammer_and_wrench:',key='Bbfgs',disabled=True,use_container_width=True)
   st.divider()
     # GENETIC
   c1,c2,c3 = st.columns([5,4,5])
@@ -63,9 +63,9 @@ with col2:
     st.subheader(':red[GENETIC]')
   c1,c2 = st.columns([1,1])
   with c1:
-    st.button(':film_projector: :red[watch]',key='Wgenetic',use_container_width=True)
+    st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wgenetic',disabled=True,use_container_width=True)
   with c2:
-    st.button(':lock: :red[download]',key='Bgenetic',disabled=True,use_container_width=True)
+    st.button(':lock: :red[download] :hammer_and_wrench:',key='Bgenetic',disabled=True,use_container_width=True)
   st.divider()
     # ADJOINT
   c1,c2,c3 = st.columns([5,4,5])
@@ -73,6 +73,6 @@ with col2:
     st.subheader(':red[ADJOINT]')
   c1,c2 = st.columns([1,1])
   with c1:
-    st.button(':film_projector: :red[watch]',key='Wadjoint',use_container_width=True)
+    st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wadjoint',disabled=True,use_container_width=True)
   with c2:
-    st.button(':lock: :red[download]',key='Badjoint',disabled=True,use_container_width=True)
+    st.button(':lock: :red[download] :hammer_and_wrench:',key='Badjoint',disabled=True,use_container_width=True)
