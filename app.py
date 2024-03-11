@@ -43,9 +43,9 @@ with col2:
     st.subheader(':red[SIMPLEX]')
   c1,c2 = st.columns([1,1])
   with c1:
-    st.button(':film_projector: :red[watch]',key='Wsimplex',use_container_width=True)
+    st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wsimplex',use_container_width=True)
   with c2:
-    st.button(':lock: :red[download]',key='Bsimplex',disabled=True,use_container_width=True)
+    st.button(':lock: :red[download] :pick::',key='Bsimplex',disabled=True,use_container_width=True)
   st.divider()
   # B-F-G-S
   c1,c2,c3 = st.columns([5,4,5])
