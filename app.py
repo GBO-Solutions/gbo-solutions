@@ -45,9 +45,9 @@ with col2:
   with c1:
     st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wsimplex',disabled=True,use_container_width=True)
   with c2:
-    with open('x.png','rb') as f_zip:
+    with open('GBOsimplex.zip','rb') as f_zip:
       #st.download_button(label='Download image',                           data=f_zip,file_name='x.png',mime='image/png')
-      st.download_button(label=':lock: :red[download] :hammer_and_wrench:',data=f_zip,file_name='x.png',mime='image/png',key='Bsimplex',disabled=False,use_container_width=True)
+      st.download_button(label=':lock: :red[download] :hammer_and_wrench:',data=f_zip,file_name='GBOsimplex.zip',mime='application/zip',key='Bsimplex',disabled=False,use_container_width=True)
   st.divider()
   # B-F-G-S
   c1,c2,c3 = st.columns([5,4,5])
