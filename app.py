@@ -56,7 +56,8 @@ with col2:
   with c1:
     st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wbfgs',disabled=True,use_container_width=True)
   with c2:
-    st.button(':lock: :red[download] :hammer_and_wrench:',key='Bbfgs',disabled=True,use_container_width=True)
+    with open('GBObfgs.zip','rb') as f_zip:
+      st.download_button(label='red[download]',data=f_zip,file_name='BObfgs.zip',mime='application/zip',key='Bbfgs',disabled=False,use_container_width=True)
   st.divider()
     # GENETIC
   c1,c2,c3 = st.columns([5,4,5])
