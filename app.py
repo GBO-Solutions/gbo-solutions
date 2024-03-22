@@ -67,7 +67,8 @@ with col2:
   with c1:
     st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wgenetic',disabled=True,use_container_width=True)
   with c2:
-    st.button(':lock: :red[download] :hammer_and_wrench:',key='Bgenetic',disabled=True,use_container_width=True)
+    with open('GBOgenetic.zip','rb') as f_zip:
+      st.download_button(laberl=':red[download]',data=f_zip,file_name='GBOgenetic.zip',mime='application/zip',key='Bgenetic',disabled=False,use_container_width=True)
   st.divider()
     # ADJOINT
   c1,c2,c3 = st.columns([5,4,5])
