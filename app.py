@@ -5,7 +5,7 @@ c1,c2 = st.columns([1,5])
 with c1:
   st.image('./logo.png')
 with c2:
-  st.header(':red[The prime rival of *Good* is Better, and its arch rival is Optimum...]')
+  st.header(':red[*The prime rival of Good is Better, and its arch rival is Optimum...*]')
   st.header('',divider='red')
 st.title('')
 
