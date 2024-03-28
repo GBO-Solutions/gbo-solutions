@@ -1,7 +1,6 @@
 import streamlit as st
 
 st.set_page_config(layout='wide')
-st.write('')
 c1,c2 = st.columns([1,5])
 with c1:
   st.image('./logo.png')
