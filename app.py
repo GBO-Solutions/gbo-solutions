@@ -5,6 +5,7 @@ page_bg_img = """"
    [data-testid = "stAppViewContainer"] {background-color: #4fff33;}
 </style>
 """
+st.markdown(page_bg_img,unsafe_all_html=True)
 
 st.set_page_config(layout='wide')
 c1,c2 = st.columns([5,1])
