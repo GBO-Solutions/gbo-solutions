@@ -1,11 +1,11 @@
 import streamlit as st
 
-page_bg_img = """"
-<style>
-   [data-testid = "stAppViewContainer"] {background-color: #4fff30;}
-</style>
-"""
-st.markdown(page_bg_img)
+#page_bg_img = """"
+#<style>
+#   [data-testid = "stAppViewContainer"] {background-color: #4fff30;}
+#</style>
+#"""
+#st.markdown(page_bg_img)
 
 st.set_page_config(layout='wide')
 c1,c2 = st.columns([5,1])
