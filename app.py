@@ -2,7 +2,7 @@ import streamlit as st
 
 page_bg_img = """"
 <style>
-   [data-testid = "stAppViewContainer"] {background-color: #4fff33;}
+   [data-testid = "stAppViewContainer"] {background-color:'green';}
 </style>
 """
 st.markdown(page_bg_img,unsafe_all_html=True)
