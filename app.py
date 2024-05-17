@@ -1,5 +1,12 @@
 import streamlit as st
 
+"""
+page_bg_img = 
+<style>
+[data-testid = "stAppViewContainer"] {background-color: #e5e5f7;}
+</style>
+"""
+
 st.set_page_config(layout='wide')
 c1,c2 = st.columns([5,1])
 with c1:
