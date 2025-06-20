@@ -51,8 +51,6 @@ with col2:
   c1,c2 = st.columns([1,1])
   with c1:
 #########################
-import streamlit as st
-
 # Αρχικοποίηση session state
 if "show_manual" not in st.session_state:
     st.session_state.show_manual = False
