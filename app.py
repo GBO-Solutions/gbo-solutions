@@ -1,5 +1,8 @@
 import streamlit as st
 
+if 'show_simplex_text' not in st.session_state: #*#
+  st.session_state['show_simplex_text'] = False #*#
+  
 #page_bg_img = """"
 #<style>
 #   [data-testid = "stAppViewContainer"] {background-color: #4fff30;}
@@ -18,7 +21,21 @@ st.title('')
 
 col1,col2 = st.columns([2,1])
 with col1:
-  st.video('./video-0.mp4')
+  #st.video('./video-0.mp4')
+  if not st.session_state['show_simplex_text']: #*#
+    st.video('./video-0.mp4') #*#
+  else: #*#
+    st.markdown( #*#
+        """
+        <div style="height: 360px; overflow-y: auto; background-color: #f9f9f9; padding: 1rem; border: 1px solid #ddd;">
+        <p><strong>SIMPLEX Μέθοδος:</strong></p>
+        <p>Η μέθοδος Simplex αποτελεί έναν από τους πιο διαδεδομένους αλγορίθμους βελτιστοποίησης για προβλήματα γραμμικού προγραμματισμού...</p>
+        <p>[Εδώ μπορείς να βάλεις όσο αναλυτικό κείμενο θέλεις.]</p>
+        <p>...</p>
+        </div>
+        """, unsafe_allow_html=True
+    ) #*#
+
   st.header('',divider='red')
   c1,c2,c3,c4,c5,c6,c7 = st.columns([3,1,1,4,1,1,4])
   with c1:
@@ -51,7 +68,8 @@ with col2:
   c1,c2 = st.columns([1,1])
   with c1:
 #########################
-    st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wsimplex',disabled=True,use_container_width=True)
+    #st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wsimplex',disabled=True,use_container_width=True)
+    st.button(':film_projector: :red[watch] :hammer_and_wrench:', key='Wsimplex', on_click=lambda: st.session_state.update({'show_simplex_text': True}), use_container_width=True) #*#
 #    if st.button('e-manual', key='Msimplex', use_container_width=True):
 #      st.switch_page('simplex.py')
 #########################
