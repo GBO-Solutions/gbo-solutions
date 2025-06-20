@@ -50,6 +50,10 @@ with col1:
     st.markdown('''
         <div style='height: 360px; overflow-y: auto; background-color: #fff0f0; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; text-align: justify; color: red; font-size: 16px;'>
         <h1>1. Introduction</h1>
+        <h2>1. Introduction</h2>
+        <h3>1. Introduction</h3>
+        <h4>1. Introduction</h4>
+        <h5>1. Introduction</h5>
         <p>Linear Programming is one of the most important fields in operations research and optimization. Its goal is to determine the optimal solution to a maximization or minimization problem of a linear objective function, subject to linear constraints. It is widely used in areas such as industrial production, resource management, economic analysis, supply chain logistics, and strategic planning.</p>
         <p>The Simplex algorithm, developed by George Dantzig in 1947, is the fundamental method for solving linear programming problems. It operates by moving from vertex to vertex along the feasible region of solutions, searching for the optimum. Despite its conceptual simplicity, the Simplex method has proven to be highly efficient in practice and is applied in a wide range of contexts—from production planning and transportation optimization to financial portfolio allocation and energy management.</p>
         <p>The purpose of this manual is twofold: first, to present the theoretical foundations of the Simplex method with clarity and an educational perspective; and second, to support the development and application of a functional computational tool, implemented within the GBO-solutions platform. Through detailed examples and step-by-step explanations, the reader will not only gain a deep understanding of the methodology, but also acquire a complete and reliable means for solving practical linear maximization problems.</p>
