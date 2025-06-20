@@ -51,7 +51,7 @@ with col2:
   c1,c2 = st.columns([1,1])
   with c1:
 #########################
-    pass
+    st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wsimplex',disabled=True,use_container_width=True)
 #    if st.button('e-manual', key='Msimplex', use_container_width=True):
 #      st.switch_page('simplex.py')
 #########################
