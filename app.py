@@ -27,8 +27,7 @@ with col1:
   else: #*#
     close_col,_ = st.columns([0.1,0.9])
     with close_col:
-      #if st.button("✖", key="close_simplex", help="Επιστροφή στο video"):
-      if st.button('x',key='close_simplex',help='return to video'):
+      if st.button('close',key='close_simplex',help='return to video'):
         st.session_state['show_simplex_text'] = False
     st.markdown( #*#
         """
