@@ -41,7 +41,7 @@ with col1:
     st.write(':red[The general standard form of a linear programming problem is formulated as follows:]')
     st.write(':red[where,]')
     st.write(':red[* the variables x_1,x2,...,xn are called decision variables,]')
-    st.latex(':red[* the variables x_1]')
+    st.latex(r':red[* the variables x_1]')
     st.write(':red[* the constants cj are the coefficients of the objective function,]')
     st.write(':red[* the coefficients aij define the linear constraints of the problem,]')
     st.write(':red[* and bi represent the right-hand side values of the constraints.]')
