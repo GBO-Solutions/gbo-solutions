@@ -51,17 +51,8 @@ with col2:
   c1,c2 = st.columns([1,1])
   with c1:
 #########################
-    # pages/manual_simplex.py
-    st.title("📘 Εγχειρίδιο Simplex")
-    st.markdown("""
-    ### Εισαγωγή
-    Αυτό είναι το εγχειρίδιο...
-    ### Βήμα 1
-    ...
-    ![Εικόνα](https://placekitten.com/500/300)
-    ### Συχνές Ερωτήσεις
-    ...
-    """)
+    if st.button('e-manual', key='Msimplex', use_container_width=True):
+      st.switch_page('manuals.dir/simplex.py')
 #########################
   with c2:
     with open('GBOsimplex.zip','rb') as f_zip:
