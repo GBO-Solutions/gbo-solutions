@@ -51,6 +51,8 @@ with col2:
   c1,c2 = st.columns([1,1])
   with c1:
 #########################
+    if "show_manual" not in st.session_state:
+      st.session_state.show_manual = False
     if st.button(label:'red[e-manual]',key='Msimplex',use_container_width=True):
       st.session_state.show_manual = True
     if st.session_state.show_manual:
