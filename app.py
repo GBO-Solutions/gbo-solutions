@@ -49,8 +49,9 @@ with col1:
           <li>and <b>b<sub>i</sub></b> represent the right-hand side values of the constraints.</li>
         </ul>
         <p>This formulation is well-suited for applying the Simplex method, as it enables a systematic transformation of the problem into tableau format and facilitates organized data processing.</p>
-
         <h5>2.2. Conversion to Standard Form</h5>
+
+        
         <p>In order for a linear programming problem to be solved using the Simplex method, it must first be expressed in standard form. This form requires that all constraints are written as equalities, and all variables are non-negative.</p>
         <p>Since most real-world constraints are expressed as inequalities of the form "less than or equal to" (&le), the conversion is performed by introducing slack variables.</p>
         <p>For example, the constraint:</p>
