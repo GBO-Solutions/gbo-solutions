@@ -51,19 +51,39 @@ with col2:
   c1,c2 = st.columns([1,1])
   with c1:
 #########################
-    if "show_manual" not in st.session_state:
-      st.session_state.show_manual = False
-    if st.button(label='red[e-manual]',key='Msimplex',use_container_width=True):
-      st.session_state.show_manual = True
-    if st.session_state.show_manual:
-      with st.container(border=True):
-        col1, col2 = st.columns([0.95, 0.05])
-        with col1:
-          st.markdown("### Εγχειρίδιο Χρήσης")
-        with col2:
-          if st.button("❌", key="close_manual"):
-            st.session_state.show_manual = False
-        st.markdown('Title...')
+import streamlit as st
+
+# Αρχικοποίηση session state
+if "show_manual" not in st.session_state:
+    st.session_state.show_manual = False
+
+# Κουμπί για εμφάνιση manual
+if st.button("📘 red[e-manual]", use_container_width=True):
+    st.session_state.show_manual = True
+
+# Αν πατήθηκε, εμφάνισε το manual
+if st.session_state.show_manual:
+    # Κουμπί κλεισίματος
+    if st.button("❌ Κλείσιμο Εγχειριδίου"):
+        st.session_state.show_manual = False
+    else:
+        st.markdown("## Εγχειρίδιο Χρήσης Simplex")
+        st.markdown("""
+        ### Εισαγωγή
+        Καλώς ήρθατε στο εγχειρίδιο...
+
+        ### Βήμα 1: Εισαγωγή Δεδομένων
+        Περιγραφή...
+
+        ### Βήμα 2: Εκτέλεση Αλγορίθμου
+        Περιγραφή...
+
+        ### Εικόνα Παράδειγμα:
+        ![Παράδειγμα](https://placekitten.com/600/300)
+
+        ### Συμπεράσματα
+        ...
+        """)
 #########################
   with c2:
     with open('GBOsimplex.zip','rb') as f_zip:
