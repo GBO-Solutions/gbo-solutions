@@ -51,31 +51,17 @@ with col2:
   c1,c2 = st.columns([1,1])
   with c1:
 #########################
-    # Αρχικοποίηση session state
-    if "show_manual" not in st.session_state:
-      st.session_state.show_manual = False
-    # Κουμπί για εμφάνιση manual
-    if st.button("📘 red[e-manual]", use_container_width=True):
-      st.session_state.show_manual = True
-    # Αν πατήθηκε, εμφάνισε το manual
-    if st.session_state.show_manual:
-        # Κουμπί κλεισίματος
-        if st.button("❌ Κλείσιμο Εγχειριδίου"):
-            st.session_state.show_manual = False
-        else:
-            st.markdown("## Εγχειρίδιο Χρήσης Simplex")
-            st.markdown("""
-            ### Εισαγωγή
-            Καλώς ήρθατε στο εγχειρίδιο...
-            ### Βήμα 1: Εισαγωγή Δεδομένων
-            Περιγραφή...
-            ### Βήμα 2: Εκτέλεση Αλγορίθμου
-            Περιγραφή...
-            ### Εικόνα Παράδειγμα:
-            ![Παράδειγμα](https://placekitten.com/600/300)
-            ### Συμπεράσματα
-            ...
-            """)
+    # pages/manual_simplex.py
+    st.title("📘 Εγχειρίδιο Simplex")
+    st.markdown("""
+    ### Εισαγωγή
+    Αυτό είναι το εγχειρίδιο...
+    ### Βήμα 1
+    ...
+    ![Εικόνα](https://placekitten.com/500/300)
+    ### Συχνές Ερωτήσεις
+    ...
+    """)
 #########################
   with c2:
     with open('GBOsimplex.zip','rb') as f_zip:
