@@ -30,7 +30,9 @@ with col1:
       if st.button('close',key='close_simplex',help='return to video'):
         st.session_state['show_simplex_text'] = False
     st.header('Simplex')
-    st.write('Giannis Serafeim')
+    st.subheader('Simplex')
+    st.write('Simplex')
+    st.text('Simplex')
     #st.markdown( #*#
     #    """
     #    
