@@ -51,8 +51,8 @@ with col2:
   c1,c2 = st.columns([1,1])
   with c1:
 #########################
-    if st.button('e-manual', key='Msimplex', use_container_width=True):
-      st.switch_page('simplex.py')
+#    if st.button('e-manual', key='Msimplex', use_container_width=True):
+#      st.switch_page('simplex.py')
 #########################
   with c2:
     with open('GBOsimplex.zip','rb') as f_zip:
