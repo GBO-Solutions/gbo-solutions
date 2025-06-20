@@ -57,14 +57,12 @@ with col1:
         <p>where <b>s<sub>1</sub></b> is the slack variable, with <b>s<sub>1</sub><b>=0.</p>
         <p>The same procedure is applied to each constraint of the &le type, adding a different slack variable to each. In this way, the system of inequalities becomes an equivalent system of equations, enabling the construction of the initial Simplex tableau.</p>
         <p>This transformation preserves the equivalence with the original problem while ensuring that all necessary conditions for the application of the method are met.</p>
-
         <h5>2.3. Geometric Interpretation of the Method</h5>
         <p>The Simplex method can be interpreted geometrically as an algorithmic process for locating the optimal solution with a convex, finite set of points - the so-called feasible region polyhedron. This polyhedron arises as the intersection of the half-spaces defined by the linear constraints of the problem.</p>
         <p>In problems with two variables, the feasible region corresponds to a convex polygon in the plane. In the general case, the geometric representation extends to higher dimensions, with the feasible region forming a convex multi-dimensional geometric space.</p>
         <p>A key property of linear programming is that, if an optimal solution exists, it lies at one of the vertices (basic feasible solutions) of the polyhedron. The Simplex method leverages this property and operates by moving from vertex to vertex - along the edges of the polyhedron - aiming to continusly improve the value of the objective function.</p>
         <p>The process begins at an initial basic feasible solution and, at each step, selects a new vertex that leads to a higher objective value. The algorithm terminates when no further improvement is possible.</p>
         <p>This geometric perspective provides significant insight into the operation of the Simplex method and explains why solving the problem does not require exhaustive enumeration of all feasible points, but rather a selective traversal of the vertices.</p>
-
         <h5>2.4. The Simplex Tableau</h5>
         <p>The Simplex tableau is the core computational and organizational tool of the method. At each step of the algorithm, the tableau summarixes the current state of the solution and provides all necessary information for determining the variables that will modify the besis, as well as for computing the next basic feasible solution.</p>
         <p>The general structure of the tableau includes:</p>
@@ -81,7 +79,6 @@ with col1:
           <li><b>C<sub>j</sub>-Z<sub>j</sub></b> expresses the marginal improvement (or reduction) in the objective function if the variable enters the basis. This quantity is also known as the reduced cost.</li>
         </ul>
         <p>The tableau allows direct execution of pivot operations using linear algebraic transformations. In each iteration, one variable enters the basis and one leaves, and the tableau is updated accordingly. The process continues until all values of <b>C<sub>j</sub>-Z<sub>j</sub><=0</b>, at which point the optimal solution has been reached.</p>
-
         <h5>2.5. Steps of the Simplex Algorithm</h5>
         <p>The Simplex method follows an iterative procedure in which each step leads to an improved (or at least equivalent) basic solution. The process begins with an initial feasible solution and advances through linear transformations until it terminates.</p>
         <p>The fundamental steps of the algorithm are as follows:</p>
@@ -106,7 +103,6 @@ with col1:
           </li>
         </ul>
         <p>The tableau is fully updated, and the procedure restarts from step i. The method completes in a finite number of steps and, provided that the problem has a feasible and bounded solution, the algorithm converges to the optimal value of the objective function.</p>
-
         <h5>2.6. Termination and Interpretation of the Solution</h5>
         <p>The Simplex algorithm terminates when all values of <b>C<sub>j</sub>-Z<sub>j</sub></b> are less than or equal to zero. At this point, no non-basic variable can enter the basis and improve the value of the objective function. The current basic solution is therefore considered optimal.</p>
         <p>The final value of the objective function is obtained directly from the corresponding field in the tableau.</p>
