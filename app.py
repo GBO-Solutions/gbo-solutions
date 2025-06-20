@@ -30,10 +30,12 @@ with col1:
       if st.button('close',key='close_simplex',help='return to video'):
         st.session_state['show_simplex_text'] = False
     st.title('Simplex')
-    st.header('Simplex')
-    st.subheader('Simplex')
-    st.write('Simplex')
-    st.text('Simplex')
+    st.header('1. Introduction')
+    #st.subheader('Simpl')
+    st.write('Linear Programming is one of the most important fields in operations research and optimization. Its goal is to determine the optimal solution to a maximization or minimization problem of a linear objective function, subject to linear constraints. It is widely used in areas such as industrial production, resource management, economic analysis, supply chain logistics, and strategic planning.')
+    st.write('The Simplex algorithm, developed by George Dantzig in 1947, is the fundamental method for solving linear programming problems. It operates by moving from vertex to vertex along the feasible region of solutions, searching for the optimum. Despite its conceptual simplicity, the Simplex method has proven to be highly efficient in practice and is applied in a wide range of contexts—from production planning and transportation optimization to financial portfolio allocation and energy management.')
+    st.write('The purpose of this manual is twofold: first, to present the theoretical foundations of the Simplex method with clarity and an educational perspective; and second, to support the development and application of a functional computational tool, implemented within the GBO-solutions platform. Through detailed examples and step-by-step explanations, the reader will not only gain a deep understanding of the methodology, but also acquire a complete and reliable means for solving practical linear maximization problems.')
+    st.text('-----')
     #st.markdown( #*#
     #    """
     #    
