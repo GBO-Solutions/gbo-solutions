@@ -50,7 +50,7 @@ with col2:
     st.subheader(':red[SIMPLEX]')
   c1,c2 = st.columns([1,1])
   with c1:
-    st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wsimplex',disabled=True,use_container_width=True)
+    st.button(':film_projector: :red[e-manual] :hammer_and_wrench:',key='Wsimplex',disabled=True,use_container_width=True)
   with c2:
     with open('GBOsimplex.zip','rb') as f_zip:
       st.download_button(label=':red[download]',data=f_zip,file_name='GBOsimplex.zip',mime='application/zip',key='Bsimplex',disabled=False,use_container_width=True)
