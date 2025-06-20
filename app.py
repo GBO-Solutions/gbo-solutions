@@ -113,6 +113,7 @@ with col1:
         </ul>
         <p>If, during the procedure, a negative or undefined ratio arises in the pivoting step, this indicates that the problem is unbounded, meaning that the objective function can increase indefinitely without violating any constraints.</p>
         <p>The final solution provides both the optimal value of the objective function and the composition of the solutio, that is, specific values of the variables that achieve it.</p>
+        <h4>3. Numerical Example (Step-by-Step Solution)</h4>
     </div>
     ''', unsafe_allow_html=True)
 
