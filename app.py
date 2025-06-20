@@ -25,6 +25,10 @@ with col1:
   if not st.session_state['show_simplex_text']: #*#
     st.video('./video-0.mp4') #*#
   else: #*#
+    close_col,_ = st.columns([0.1,0.9])
+    with close_col:
+      if st.button('x',keey='close_simplex',help='return to video'):
+        st.session_state['show_simplex_text'] = False
     st.markdown( #*#
         """
         <div style="height: 360px; overflow-y: auto; background-color: #f9f9f9; padding: 1rem; border: 1px solid #ddd;">
