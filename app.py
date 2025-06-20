@@ -29,6 +29,7 @@ with col1:
     with close_col:
       if st.button('close',key='close_simplex',help='return to video'):
         st.session_state['show_simplex_text'] = False
+    st.title('Simplex')
     st.header('Simplex')
     st.subheader('Simplex')
     st.write('Simplex')
