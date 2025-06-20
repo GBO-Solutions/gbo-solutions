@@ -29,16 +29,13 @@ with col1:
     with close_col:
       if st.button('close',key='close_simplex',help='return to video'):
         st.session_state['show_simplex_text'] = False
-    st.markdown( #*#
-        """
-        <div style="height: 360px; overflow-y: auto; background-color: #f9f9f9; padding: 1rem; border: 1px solid #ddd;">
-        <p><strong>SIMPLEX Μέθοδος:</strong></p>
-        <p>Η μέθοδος Simplex αποτελεί έναν από τους πιο διαδεδομένους αλγορίθμους βελτιστοποίησης για προβλήματα γραμμικού προγραμματισμού...</p>
-        <p>[Εδώ μπορείς να βάλεις όσο αναλυτικό κείμενο θέλεις.]</p>
-        <p>...</p>
-        </div>
-        """, unsafe_allow_html=True
-    ) #*#
+    st.header('Simplex')
+    st.write('Giannis Serafeim')
+    #st.markdown( #*#
+    #    """
+    #    
+    #    """, unsafe_allow_html=True
+    #) #*#
 
   st.header('',divider='red')
   c1,c2,c3,c4,c5,c6,c7 = st.columns([3,1,1,4,1,1,4])
