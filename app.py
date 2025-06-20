@@ -52,7 +52,7 @@ with col2:
   with c1:
 #########################
     if st.button('e-manual', key='Msimplex', use_container_width=True):
-      st.switch_page('manuals.dir/simplex.py')
+      st.switch_page('manuals.dir/simplex')
 #########################
   with c2:
     with open('GBOsimplex.zip','rb') as f_zip:
