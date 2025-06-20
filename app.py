@@ -30,28 +30,41 @@ with col1:
       if st.button('close',key='close_simplex',help='return to video'):
         st.session_state['show_simplex_text'] = False
     st.title(':red[Simplex]')
-    st.header(':red[1. Introduction]')
-    #st.subheader('Simplex')
-    st.write(':red[Linear Programming is one of the most important fields in operations research and optimization. Its goal is to determine the optimal solution to a maximization or minimization problem of a linear objective function, subject to linear constraints. It is widely used in areas such as industrial production, resource management, economic analysis, supply chain logistics, and strategic planning.]')
-    st.write(':red[The Simplex algorithm, developed by George Dantzig in 1947, is the fundamental method for solving linear programming problems. It operates by moving from vertex to vertex along the feasible region of solutions, searching for the optimum. Despite its conceptual simplicity, the Simplex method has proven to be highly efficient in practice and is applied in a wide range of contexts—from production planning and transportation optimization to financial portfolio allocation and energy management.]')
-    st.write(':red[The purpose of this manual is twofold: first, to present the theoretical foundations of the Simplex method with clarity and an educational perspective; and second, to support the development and application of a functional computational tool, implemented within the GBO-solutions platform. Through detailed examples and step-by-step explanations, the reader will not only gain a deep understanding of the methodology, but also acquire a complete and reliable means for solving practical linear maximization problems.]')
-    st.header(':red[2. Theory of Simplex]')
-    st.subheader(':red[2.1. Standard Form of a Linear Programming Problem]')
-    st.write(':red[Linear programming is a mathematical optimization methodology aimed at determining the best possible value of a linear objective function, given a set of linear constraints. Such problems can be precisely described using systems of equations and inequalities.]')
-    st.write(':red[The general standard form of a linear programming problem is formulated as follows:]')
-    st.write(':red[where,]')
-    st.write(':red[* the variables x_1,x2,...,xn are called decision variables,]')
-    st.latex(r':red[\text{the variables } x_1]')
-    st.write(':red[* the constants cj are the coefficients of the objective function,]')
-    st.write(':red[* the coefficients aij define the linear constraints of the problem,]')
-    st.write(':red[* and bi represent the right-hand side values of the constraints.]')
-    st.write(':red[This formulation is well-suited for applying the Simplex method, as it enables a systematic transformation of the problem into tableau format and facilitates organized data processing.]')
-    st.text('-----')
-    #st.markdown( #*#
-    #    """
-    #    
-    #    """, unsafe_allow_html=True
-    #) #*#
+    #st.header(':red[1. Introduction]')
+    ##st.subheader('Simplex')
+    #st.write(':red[Linear Programming is one of the most important fields in operations research and optimization. Its goal is to determine the optimal solution to a maximization or minimization problem of a linear objective function, subject to linear constraints. It is widely used in areas such as industrial production, resource management, economic analysis, supply chain logistics, and strategic planning.]')
+    #st.write(':red[The Simplex algorithm, developed by George Dantzig in 1947, is the fundamental method for solving linear programming problems. It operates by moving from vertex to vertex along the feasible region of solutions, searching for the optimum. Despite its conceptual simplicity, the Simplex method has proven to be highly efficient in practice and is applied in a wide range of contexts—from production planning and transportation optimization to financial portfolio allocation and energy management.]')
+    #st.write(':red[The purpose of this manual is twofold: first, to present the theoretical foundations of the Simplex method with clarity and an educational perspective; and second, to support the development and application of a functional computational tool, implemented within the GBO-solutions platform. Through detailed examples and step-by-step explanations, the reader will not only gain a deep understanding of the methodology, but also acquire a complete and reliable means for solving practical linear maximization problems.]')
+    #st.header(':red[2. Theory of Simplex]')
+    #st.subheader(':red[2.1. Standard Form of a Linear Programming Problem]')
+    #st.write(':red[Linear programming is a mathematical optimization methodology aimed at determining the best possible value of a linear objective function, given a set of linear constraints. Such problems can be precisely described using systems of equations and inequalities.]')
+    #st.write(':red[The general standard form of a linear programming problem is formulated as follows:]')
+    #st.write(':red[where,]')
+    #st.write(':red[* the variables x_1,x2,...,xn are called decision variables,]')
+    #st.latex(r':red[\text{the variables } x_1]')
+    #st.write(':red[* the constants cj are the coefficients of the objective function,]')
+    #st.write(':red[* the coefficients aij define the linear constraints of the problem,]')
+    #st.write(':red[* and bi represent the right-hand side values of the constraints.]')
+    #st.write(':red[This formulation is well-suited for applying the Simplex method, as it enables a systematic transformation of the problem into tableau format and facilitates organized data processing.]')
+    #st.text('-----')
+    st.markdown( #*#
+        """
+        <div style='text-align: justify; color: red; font-size: 16px;'>
+
+    The variables <b>x<sub>1</sub></b>, <b>x<sub>2</sub></b>, and <b>x<sub>3</sub></b> represent the decision parameters of the system. 
+    Their values determine the optimal configuration in the optimization model being evaluated.
+
+    <ul>
+      <li><b>x<sub>1</sub></b>: Represents the amount of resource A allocated.</li>
+      <li><b>x<sub>2</sub></b>: Corresponds to the production rate of unit B.</li>
+      <li><b>x<sub>3</sub></b>: Indicates the transportation cost for region C.</li>
+    </ul>
+
+    The goal is to minimize the total cost function under the given constraints while ensuring system feasibility.
+
+    </div>
+        """, unsafe_allow_html=True
+    ) #*#
 
   st.header('',divider='red')
   c1,c2,c3,c4,c5,c6,c7 = st.columns([3,1,1,4,1,1,4])
