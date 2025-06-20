@@ -49,15 +49,22 @@ with col1:
     #st.text('-----')
     st.markdown('''
         <div style='height: 360px; overflow-y: auto; background-color: #fff0f0; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; text-align: justify; color: red; font-size: 16px;'>
-        <h1>1. Introduction</h1>
-        <h2>1. Introduction</h2>
-        <h3>1. Introduction</h3>
         <h4>1. Introduction</h4>
-        <h5>1. Introduction</h5>
         <p>Linear Programming is one of the most important fields in operations research and optimization. Its goal is to determine the optimal solution to a maximization or minimization problem of a linear objective function, subject to linear constraints. It is widely used in areas such as industrial production, resource management, economic analysis, supply chain logistics, and strategic planning.</p>
         <p>The Simplex algorithm, developed by George Dantzig in 1947, is the fundamental method for solving linear programming problems. It operates by moving from vertex to vertex along the feasible region of solutions, searching for the optimum. Despite its conceptual simplicity, the Simplex method has proven to be highly efficient in practice and is applied in a wide range of contexts—from production planning and transportation optimization to financial portfolio allocation and energy management.</p>
         <p>The purpose of this manual is twofold: first, to present the theoretical foundations of the Simplex method with clarity and an educational perspective; and second, to support the development and application of a functional computational tool, implemented within the GBO-solutions platform. Through detailed examples and step-by-step explanations, the reader will not only gain a deep understanding of the methodology, but also acquire a complete and reliable means for solving practical linear maximization problems.</p>
-
+        <h4>2. Theory of Simplex</h4>
+        <h5>2.1. Standard Form of a Linear Programming Problem</h5>
+        <p>Linear programming is a mathematical optimization methodology aimed at determining the best possible value of a linear objective function, given a set of linear constraints. Such problems can be precisely described using systems of equations and inequalities.</p>
+        <p>The general standard form of a linear programming problem is formulated as follows:</p>
+        <p>where,</p>
+        <ul>
+          <li>the variables <b>x<sub>1</sub></b>,<b>x<sub>2</sub></b>,...,<b>x<sub>n</sub></b> are called decision variables,</li>
+          <li>the constants <b>c<sub>j</sub></b> are the coefficients of the objective function,</li>
+          <li>the coefficients aij define the linear constraints of the problem,</li>
+          <li>and <b>b<sub>i</sub></b> represent the right-hand side values of the constraints.</li>
+        </ul>
+        <p>This formulation is well-suited for applying the Simplex method, as it enables a systematic transformation of the problem into tableau format and facilitates organized data processing.</p>
 
 
 
