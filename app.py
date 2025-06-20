@@ -31,7 +31,7 @@ with col1:
         st.session_state['show_simplex_text'] = False
 
     st.markdown('''
-        <div style='height: 720px; overflow-y: auto; background-color: white; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; text-align: justify; color: red; font-size: 16px;'>
+        <div style='height: 650px; overflow-y: auto; background-color: white; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; text-align: justify; color: red; font-size: 16px;'>
         <h3>Simplex Method – Technical Guide</h3>
         <h4>1. Introduction</h4>
         <p>Linear Programming is one of the most important fields in operations research and optimization. Its goal is to determine the optimal solution to a maximization or minimization problem of a linear objective function, subject to linear constraints. It is widely used in areas such as industrial production, resource management, economic analysis, supply chain logistics, and strategic planning.</p>
