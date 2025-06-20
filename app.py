@@ -53,10 +53,8 @@ with col1:
         <p>In order for a linear programming problem to be solved using the Simplex method, it must first be expressed in standard form. This form requires that all constraints are written as equalities, and all variables are non-negative.</p>
         <p>Since most real-world constraints are expressed as inequalities of the form "less than or equal to" (&le), the conversion is performed by introducing slack variables.</p>
         <p>For example, the constraint:</p>
-
         <p>is transformed into the equivalent equation:</p>
-        
-        <p>where <b>s<sub>1</sub></b> is the slack variable, with <b>s<sub>1</sub><b>>=0.</p>
+        <p>where <b>s<sub>1</sub></b> is the slack variable, with <b>s<sub>1</sub><b>=0.</p>
         <p>The same procedure is applied to each constraint of the &le type, adding a different slack variable to each. In this way, the system of inequalities becomes an equivalent system of equations, enabling the construction of the initial Simplex tableau.</p>
         <p>This transformation preserves the equivalence with the original problem while ensuring that all necessary conditions for the application of the method are met.</p>
 
