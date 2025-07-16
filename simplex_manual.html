@@ -33,7 +33,11 @@ Since most real-world constraints are expressed as inequalities of the form "les
 <p>This transformation preserves the equivalence with the original problem while ensuring that all necessary conditions for the application of the method are met.</p>
 
 <h3>2.3. Geometric Interpretation of the Method</h3>
-<p>The Simplex method works by moving from one vertex to another along the edges of the feasible region, always improving (or at least not worsening) the objective function. Due to the convexity of the feasible region and the linearity of the objective function, if a maximum exists, it will occur at one of these vertices.</p>
+<p>The Simplex method can be interpreted geometrically as an algorithmic process for locating the optimal solution with a convex, finite set of points - the so-called feasible region polyhedron. This polyhedron arises as the intersection of the half-spaces defined by the linear constraints of the problem.</p>
+<p>In problems with two variables, the feasible region corresponds to a convex polygon in the plane. In the general case, the geometric representation extends to higher dimensions, with the feasible region forming a convex multi-dimensional geometric space.</p>
+<p>A key property of linear programming is that, if an optimal solution exists, it lies at one of the vertices (basic feasible solutions) of the polyhedron. The Simplex method leverages this property and operates by moving from vertex to vertex - along the edges of the polyhedron - aiming to continusly improve the value of the objective function.</p>
+<p>The process begins at an initial basic feasible solution and, at each step, selects a new vertex that leads to a higher objective value. The algorithm terminates when no further improvement is possible.</p>
+<p>This geometric perspective provides significant insight into the operation of the Simplex method and explains why solving the problem does not require exhaustive enumeration of all feasible points, but rather a selective traversal of the vertices.</p>
 
 <h3>2.4 Simplex Tableau</h3>
 <p>The Simplex algorithm is typically implemented using a tabular format known as the Simplex tableau. Each iteration updates this tableau by performing pivot operations, selecting an entering and a leaving variable, and computing a new basic solution.</p>
