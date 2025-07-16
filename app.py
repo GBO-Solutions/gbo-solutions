@@ -21,7 +21,6 @@ st.title('')
 
 col1,col2 = st.columns([2,1])
 with col1:
-  #st.video('./video-0.mp4')
   if not st.session_state['show_simplex_text']: #*#
     st.video('./video-0.mp4') #*#
   else:
