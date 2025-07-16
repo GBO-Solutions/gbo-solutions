@@ -29,20 +29,25 @@
     </p>
   </div>
 
-  <h3>2.2. Conversion to Standard Form</h3>
+  <div>
+  <h5>2.2. Conversion to Standard Form</h5>
     <p>In order for a linear programming problem to be solved using the Simplex method, it must first be expressed in standard form. This form requires that all constraints are written as equalities, and all variables are non-negative. Since most real-world constraints are expressed as inequalities of the form "less than or equal to" (≤), the conversion is performed by introducing slack variables.</p>
     <p>For example, the constraint: x₁+2x₂≤6 is transformed into the equivalent equation: x₁+2x₂+s₁=6, where s₁ is the slack variable, with s₁≥0.</p>
     <p>The same procedure is applied to each constraint of the ≤ type, adding a different slack variable to each. In this way, the system of inequalities becomes an equivalent system of equations, enabling the construction of the initial Simplex tableau.</p>
     <p>This transformation preserves the equivalence with the original problem while ensuring that all necessary conditions for the application of the method are met.</p>
+  </div>
 
-  <h3>2.3. Geometric Interpretation of the Method</h3>
+  <div>
+  <h5>2.3. Geometric Interpretation of the Method</h5>
     <p>The Simplex method can be interpreted geometrically as an algorithmic process for locating the optimal solution with a convex, finite set of points - the so-called feasible region polyhedron. This polyhedron arises as the intersection of the half-spaces defined by the linear constraints of the problem.</p>
     <p>In problems with two variables, the feasible region corresponds to a convex polygon in the plane. In the general case, the geometric representation extends to higher dimensions, with the feasible region forming a convex multi-dimensional geometric space.</p>
     <p>A key property of linear programming is that, if an optimal solution exists, it lies at one of the vertices (basic feasible solutions) of the polyhedron. The Simplex method leverages this property and operates by moving from vertex to vertex - along the edges of the polyhedron - aiming to continusly improve the value of the objective function.</p>
     <p>The process begins at an initial basic feasible solution and, at each step, selects a new vertex that leads to a higher objective value. The algorithm terminates when no further improvement is possible.</p>
     <p>This geometric perspective provides significant insight into the operation of the Simplex method and explains why solving the problem does not require exhaustive enumeration of all feasible points, but rather a selective traversal of the vertices.</p>
+  </div>
 
-  <h3>2.4. The Simplex Tableau</h3>
+  <div>
+  <h5>2.4. The Simplex Tableau</h5>
     <p>The Simplex tableau is the core computational and organizational tool of the method. At each step of the algorithm, the tableau summarixes the current state of the solution and provides all necessary information for determining the variables that will modify the besis, as well as for computing the next basic feasible solution.</p>
     <p>
     The general structure of the tableau includes:
@@ -60,8 +65,10 @@
     </ul>
     The tableau allows direct execution of pivot operations using linear algebraic transformations. In each iteration, one variable enters the basis and one leaves, and the tableau is updated accordingly. The process continues until all values of Cj-Zj<=0, at which point the optimal solution has been reached.
     </p>
+  </div>
 
-  <h3>2.5. Steps of the Simplex Algorithm</h3>
+  <div>
+  <h5>2.5. Steps of the Simplex Algorithm</h5>
     <p>The Simplex method follows an iterative procedure in which each step leads to an improved (or at least equivalent) basic solution. The process begins with an initial feasible solution and advances through linear transformations until it terminates.</p>
     <p>
     The fundamental steps of the algorithm are as follows:
@@ -86,8 +93,10 @@
     </ol>
     The tableau is fully updated, and the procedure restarts from step i. The method completes in a finite number of steps and, provided that the problem has a feasible and bounded solution, the algorithm converges to the optimal value of the objective function.
     </p>
+  </div>
 
-  <h3>2.6. Termination and Interpretation of the Solution</h3>
+  <div>
+  <h5>2.6. Termination and Interpretation of the Solution</h5>
     <p>The Simplex algorithm terminates when all values of Cj-Zj are less than or equal to zero. At this point, no non-basic variable can enter the basis and improve the value of the objective function. The current basic solution is therefore considered optimal.</p>
     <p>The final value of the objective function is obtained directly from the corresponding field in the tableau.</p>
     <p>
@@ -99,33 +108,38 @@
     </p>
     <p>If, during the procedure, a negative or undefined ratio arises in the pivoting step, this indicates that the problem is unbounded, meaning that the objective function can increase indefinitely without violating any constraints.</p>
     <p>The final solution provides both the optimal value of the objective function and the composition of the solutio, that is, specific values of the variables that achieve it.</p>
+  </div>
 
-
-<h2>Chapter 3: Numerical Example (Step-by-Step Solution)</h2>
-
-<p>In this chapter, we present a detailed application of the Simplex method to a specific linear programming problem. The solution is developed step by step, following the logic of the method described in the previous chapter. The goal is to provide a clear understanding of the computational process — including pivot selection and tableau transformation — as it would be carried out manually.</p>
-<p><em>Note:</em> The example solved involves two variables and three constraints, and concludes with the optimal solution: x₁ = 2, x₂ = 3, z = 21.</p>
-
-
-<h2>4. Code Overview and Usage</h2>
-  <p>The file <code style="display: inline;">module.py</code> provides a ready-to-use and functional tool for solving linear programming problems using the Simplex method. Its usage is simple and focuses solely on preparing the input data and interpreting the results. The user only needs to properly define the input and call the corresponding function. The entire procedure is executed automatically, while each step is logged to a text file.</p>
-      
-  <h3>4.1. Input -- What the user must provide</h3>
+<h3>Chapter 3: Numerical Example (Step-by-Step Solution)</h3>
+<div>
   <p>
-  The input is a list or array (e.g. numpy.array) where:
-  <ul>
-    <li>the first row contains the coefficients of the objective function</li>
-    <li>the remaining rows represent the constraints (coefficients and right-hand sides)</li>
-  </ul>
+    xxx
   </p>
-  <p>
-    Example, as in example.py:
-    <pre>
-      <code>Aug = [[3, 5, -1],[1, 2, 8],[3, 2, 12],[1, 1, 5]]</code>
-    </pre>
-  </p>
+</div>
 
-  <h3>4.2. Running the Solver</h3>
+<h3>4. Code Overview and Usage</h3>
+  <div>
+    <p>The file <code style="display: inline;">module.py</code> provides a ready-to-use and functional tool for solving linear programming problems using the Simplex method. Its usage is simple and focuses solely on preparing the input data and interpreting the results. The user only needs to properly define the input and call the corresponding function. The entire procedure is executed automatically, while each step is logged to a text file.</p>
+  </div>
+  <div>
+  <h5>4.1. Input -- What the user must provide</h5>
+    <p>
+      The input is a list or array (e.g. numpy.array) where:
+      <ul>
+        <li>the first row contains the coefficients of the objective function</li>
+        <li>the remaining rows represent the constraints (coefficients and right-hand sides)</li>
+      </ul>
+    </p>
+    <p>
+      Example, as in example.py:
+      <pre>
+        <code>Aug = [[3, 5, -1],[1, 2, 8],[3, 2, 12],[1, 1, 5]]</code>
+      </pre>
+    </p>
+  </div>
+
+  <div>
+  <h5>4.2. Running the Solver</h5>
     <p>
       The entire solution process is triggered with a signle command:
       <pre>
@@ -136,8 +150,10 @@
       </pre>
       The gbo_simplex function applies the Simplex method and returns the final result.
     </p>
+  </div>
 
-  <h3>4.3. Output - what is returned</h3>
+  <div>
+  <h5>4.3. Output - what is returned</h5>
     <p>
       The returned object 'result' contains:
       <ul>
@@ -153,8 +169,10 @@
       </pre>
       This means: x₁ = 2, x₂ = 3 and z = 21
     </p>
+  </div>
 
-  <h3>4.4. Notes</h3>
+  <div>
+  <h5>4.4. Notes</h5>
     <p>
       <ul>
         <li>the user does not need to understand the internal mechanics of the algorithm</li>
@@ -164,10 +182,14 @@
       </ul>
       An illustrative sketch follows, showing step-by-step the execution of a specific example using the 'gbo_simplex' function.
     </p>
+  </div>
 
 <h3>5. Remarks and Extension Possibilities</h3>
-  <p>A functional implementation of the Simplex method for linear programming maximization problems has been presented. The algorithm is designed with an emphasis on usability, clear structure, and efficient resolution of a winde range of problems.</p>
+  <div>
+    <p>A functional implementation of the Simplex method for linear programming maximization problems has been presented. The algorithm is designed with an emphasis on usability, clear structure, and efficient resolution of a winde range of problems.</p>
+  </div>
 
+  <div>
   <h5>5.1. Current capabilities and assumptions</h5>
     <p>
       <ul>
@@ -177,8 +199,10 @@
         <li>the output includes the optimal value of the objective function and the corresponding values of the design variables</li>
       </ul> 
     </p>
+  </div>
 
-  <h4>5.2. Possible extensions</h4>
+  <div>
+  <h5>5.2. Possible extensions</h5>
     <p>
       Future improvments could include:
       <ul>
@@ -188,11 +212,15 @@
         <li>a graphical user interface (GUI) for easier and more accessible interaction</li>
       </ul>
     </p>
+  </div>
 
-  <h4>5.3. Collaboration and development</h4>
+  <div>
+  <h5>5.3. Collaboration and development</h5>
     <p>This project is part of the GBO-solutions initiative, which hosts oprn-source optimization tools. The platform is open to suggestions, enhancements, and potential collaborations aimed at expanding the functionality and applicability of its algorithms.</p>
+  </div>
 
 <h2>6. Conclusions</h2>
+<div>
   <p>This manuscript/manual presented the Simplex method for solving linear programming problems. Through theoretical intreoduction, step-by-step numerical example, and implementation in code, it demonstrated how the algorithm can be applied directly to find optimal solutions.</p>
   <p>
     The reader had the opportunity to:
@@ -204,3 +232,4 @@
   </p>
   <p>The accompanying implementation 'module.py' provides a comprehensive and reliable computational tool, suitable for practical use, testing, and data evaluation -- without requiring specialized libraries or complex configuration. It is accompanied by a usage example and output file.</p>
   <p>The Simplex method remains to this day a core technique in operations research, widely used in fields such as industry, logistics, administrative support, and economic analysis. This material aims to faciliate access to and practical use of the method, by professionals, researchers, and all those seeking a stable, flexible, and extensible foundation.</p>
+</div>
