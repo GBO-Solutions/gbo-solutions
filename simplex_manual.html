@@ -117,11 +117,7 @@
   <p>
     Example, as in example.py:
     <pre>
-      <code>Aug = [[3, 5, -1],
-                    [1, 2, 8],
-                    [3, 2, 12],
-                    [1, 1, 5]]
-      </code>
+      <code>Aug = [[3, 5, -1],[1, 2, 8],[3, 2, 12],[1, 1, 5]]</code>
     </pre>
   </p>
 
@@ -165,33 +161,42 @@
       An illustrative sketch follows, showing step-by-step the execution of a specific example using the 'gbo_simplex' function.
     </p>
 
-<h2>Chapter 5: Remarks and Extension Possibilities</h2>
+<h2>5. Remarks and Extension Possibilities</h2>
+  <p>A functional implementation of the Simplex method for linear programming maximization problems has been presented. The algorithm is designed with an emphasis on usability, clear structure, and efficient resolution of a winde range of problems.</p>
 
-<p>A functional implementation of the Simplex method for linear programming problems has been presented. The algorithm is designed with an emphasis on usability, clear structure, and efficient resolution of a wide range of problems.</p>
-<h4>Current capabilities and assumptions</h4>
-<ul>
-<li>Supports maximization problems with non-negative variables.</li>
-<li>Constraints may include inequalities of the form ≤ or ≥.</li>
-<li>The input must follow the described format.</li>
-<li>The output includes the optimal value and variable values.</li>
-</ul>
-<h4>Possible extensions</h4>
-<ul>
-<li>Support for minimization problems</li>
-<li>Handling equality constraints and artificial variables</li>
-<li>Input validation and error handling</li>
-<li>Graphical output (for 2D problems)</li>
-<li>Graphical User Interface (GUI)</li>
-</ul>
-<h4>Collaboration and development</h4>
-<p>This project is part of the <strong>GBO-solutions</strong> initiative, which hosts <strong>open-source</strong> optimization tools. The platform welcomes suggestions, improvements, and collaborations for future development.</p>
+  <h4>5.1. Current capabilities and assumptions</h4>
+    <p>
+      <ul>
+        <li>supports maximization problems with non-negative variables</li>
+        <li>constraints may include inequalities of the form <= or >=</li>
+        <li>the input must follow the format described in this manuscript</li>
+        <li>the output includes the optimal value of the objective function and the corresponding values of the design variables</li>
+      </ul> 
+    </p>
 
-<h2>Chapter 6: Summary – Conclusions</h2>
+  <h4>5.2. Possible extensions</h4>
+    <p>
+      Future improvments could include:
+      <ul>
+        <li>support for minimization problems</li>
+        <li>automatic handling of equality or/and inequalities constraints</li>
+        <li>input validation and user-friendly error reporting</li>
+        <li>a graphical user interface (GUI) for easier and more accessible interaction</li>
+      </ul>
+    </p>
 
-<p>This manual presented the Simplex method for solving linear programming problems. Through theoretical introduction, step-by-step numerical example, and implementation in code, it demonstrated how the algorithm can be applied directly to find optimal solutions.</p>
-<ul>
-<li>Become familiar with the method's logic and process</li>
-<li>Follow a full example step by step</li>
-<li>Apply the algorithm through Python code</li>
-</ul>
-<p>The <code>module.py</code> file offers a complete and dependable computational tool. The Simplex method remains a central technique in operations research, applied in areas such as industry, logistics, and finance. This material aims to support access to and application of the method by professionals, analysts, and anyone seeking a robust and adaptable solution approach.</p>
+  <h4>5.3. Collaboration and development</h4>
+    <p>This project is part of the GBO-solutions initiative, which hosts oprn-source optimization tools. The platform is open to suggestions, enhancements, and potential collaborations aimed at expanding the functionality and applicability of its algorithms.</p>
+
+<h2>6. Conclusions</h2>
+  <p>This manuscript/manual presented the Simplex method for solving linear programming problems. Through theoretical intreoduction, step-by-step numerical example, and implementation in code, it demonstrated how the algorithm can be applied directly to find optimal solutions.</p>
+  <p>
+    The reader had the opportunity to:
+    <ul>
+      <li>become familiar with the key steps and numerical process of the method</li>
+      <li>follow a complete example with a step-by-step approach</li>
+      <li>apply the same algorithm through a ready-to-use and well-structured Python implementation</li>
+    </ul>    
+  </p>
+  <p>The accompanying implementation 'module.py' provides a comprehensive and reliable computational tool, suitable for practical use, testing, and data evaluation -- without requiring specialized libraries or complex configuration. It is accompanied by a usage example and output file.</p>
+  <p>The Simplex method remains to this day a core technique in operations research, widely used in fields such as industry, logistics, administrative support, and economic analysis. This material aims to faciliate access to and practical use of the method, by professionals, researchers, and all those seeking a stable, flexible, and extensible foundation.</p>
