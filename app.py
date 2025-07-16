@@ -153,7 +153,7 @@ with col2:
   with c1:
 #########################
     #st.button(':film_projector: :red[watch] :hammer_and_wrench:',key='Wsimplex',disabled=True,use_container_width=True)
-    st.button(':film_projector: :red[watch] :hammer_and_wrench:', key='Wsimplex', on_click=lambda: st.session_state.update({'show_simplex_text': True}), use_container_width=True) #*#
+    st.button(':red[manuscript]', key='Wsimplex', on_click=lambda: st.session_state.update({'show_simplex_text': True}), use_container_width=True) #*#
 #    if st.button('e-manual', key='Msimplex', use_container_width=True):
 #      st.switch_page('simplex.py')
 #########################
