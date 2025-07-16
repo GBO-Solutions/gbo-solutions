@@ -25,10 +25,10 @@ with col1:
   if not st.session_state['show_simplex_text']: #*#
     st.video('./video-0.mp4') #*#
   else: #*#
-    close_col,_ = st.columns([0.1,0.9])
-    with close_col:
-      if st.button('close',key='close_simplex',help='return to video'):
-        st.session_state['show_simplex_text'] = False
+    #close_col,_ = st.columns([0.1,0.9])
+    #with close_col:
+    if st.button('close',key='close_simplex',help='return to video'):
+      st.session_state['show_simplex_text'] = False
       with open('simplex_manual.html', 'r', encoding='utf-8') as file:
         simplex_html = file.read()
     st.markdown(simplex_html, unsafe_allow_html=True)
