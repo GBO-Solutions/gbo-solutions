@@ -83,7 +83,7 @@
     The tableau is fully updated, and the procedure restarts from step i. The method completes in a finite number of steps and, provided that the problem has a feasible and bounded solution, the algorithm converges to the optimal value of the objective function.
     </p>
 
-<h3>2.6. Termination and Interpretation of the Solution</h3>
+  <h3>2.6. Termination and Interpretation of the Solution</h3>
     <p>The Simplex algorithm terminates when all values of Cj-Zj are less than or equal to zero. At this point, no non-basic variable can enter the basis and improve the value of the objective function. The current basic solution is therefore considered optimal.</p>
     <p>The final value of the objective function is obtained directly from the corresponding field in the tableau.</p>
     <p>
@@ -102,30 +102,68 @@
 <p>In this chapter, we present a detailed application of the Simplex method to a specific linear programming problem. The solution is developed step by step, following the logic of the method described in the previous chapter. The goal is to provide a clear understanding of the computational process — including pivot selection and tableau transformation — as it would be carried out manually.</p>
 <p><em>Note:</em> The example solved involves two variables and three constraints, and concludes with the optimal solution: x₁ = 2, x₂ = 3, z = 21.</p>
 
-<h2>Chapter 4: Code Overview and Usage</h2>
 
-<p>The file <code>module.py</code> provides a ready-to-use and functional tool for solving linear programming problems using the Simplex method. Its usage is simple and focuses solely on preparing the input data and interpreting the results.</p>
-<h4>Input – What the user must provide</h4>
-<pre><code>Aug = [
-    [3, 5, -1],
-    [1, 2, 8],
-    [3, 2, 12],
-    [1, 1, 5]
-]</code></pre>
-<h4>Running the Solver</h4>
-<pre><code>from module import gbo_simplex
-result = gbo_simplex(Aug)</code></pre>
-<h4>Output – What is returned</h4>
-<pre><code>>> print(result)
-[2.0, 3.0, 21.0]</code></pre>
-<p>This means: x₁ = 2, x₂ = 3, z = 21</p>
-<h4>Notes</h4>
-<ul>
-<li>No need to understand the internal workings of the algorithm.</li>
-<li>No external libraries are required.</li>
-<li>See <code>example.py</code> for usage pattern.</li>
-<li>Works for maximization problems with ≤ or ≥ constraints.</li>
-</ul>
+<h2>4. Code Overview and Usage</h2>
+  <p>The file <code>module.py</code> provides a ready-to-use and functional tool for solving linear programming problems using the Simplex method. Its usage is simple and focuses solely on preparing the input data and interpreting the results. The user only needs to properly define the input and call the corresponding function. The entire procedure is executed automatically, while each step is logged to a text file.</p>
+      
+  <h3>4.1. Input -- What the user must provide</h3>
+  <p>
+  The input is a list or array (e.g. numpy.array) where:
+  <ul>
+    <li>the first row contains the coefficients of the objective function</li>
+    <li>the remaining rows represent the constraints (coefficients and right-hand sides)</li>
+  </ul>
+  </p>
+  <p>
+    Example, as in example.py:
+    <pre>
+      <code>Aug = [[3, 5, -1],
+                      [1, 2, 8],
+                      [3, 2, 12],
+                      [1, 1, 5]]
+      </code>
+    </pre>
+  </p>
+
+  <h3>4.2. Running the Solver</h3>
+    <p>
+      The entire solution process is triggered with a signle command:
+      <pre>
+        <code>
+          from module import gbo_simplex
+          result = gbo_simplex(Aug)
+        </code>
+      </pre>
+      The gbo_simplex function applies the Simplex method and returns the final result.
+    </p>
+
+  <h3>4.3. Output - what is returned</h3>
+    <p>
+      The returned object 'result' contains:
+      <ul>
+        <li>the optimal value of the objective function (e.g. 21.0)</li>
+        <li>the optimal values of the design variables (e.g. [2.0,3.0]</li>
+      </ul>
+      Example output:
+      <pre>
+        <code>
+          >> print(result)
+          21.0,[2.0, 3.0]
+        </code>
+      </pre>
+      This means: x₁ = 2, x₂ = 3 and z = 21
+    </p>
+
+  <h3>4.4. Notes</h3>
+    <p>
+      <ul>
+        <li>the user does not need to understand the internal mechanics of the algorithm</li>
+        <li>correctly formatting the input and reading the result is sufficient to use the tool</li>
+        <li>the file <code>example.py</code> provides a complete usage example and can be used as a template</li>
+        <li>The algorithm handles only maximization problems with constraints of the forms "less than or equal to"</li>
+      </ul>
+      An illustrative sketch follows, showing step-by-step the execution of a specific example using the 'gbo_simplex' function.
+    </p>
 
 <h2>Chapter 5: Remarks and Extension Possibilities</h2>
 
