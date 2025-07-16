@@ -24,11 +24,26 @@ with col1:
   if not st.session_state['show_simplex_text']: #*#
     st.video('./video-0.mp4') #*#
   else:
-    if st.button('close',key='close_simplex',help='return to video'):
-      st.session_state['show_simplex_text'] = False
-      with open('simplex_manual.html', 'r', encoding='utf-8') as file:
-        simplex_html = file.read()
-      st.markdown(simplex_html, unsafe_allow_html=True)
+    else:
+    if st.button('close', key='close_simplex', help='return to video'):
+        st.session_state['show_simplex_text'] = False
+
+    # Διαβάζουμε το HTML αρχείο και το ενσωματώνουμε σε scroll box
+    with open('simplex_manual.html', 'r', encoding='utf-8') as file:
+        html_content = file.read()
+
+    # Τοποθετούμε το HTML σε scrollable DIV
+    st.markdown(f"""
+    <div style='height: 650px; overflow-y: auto; background-color: white; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; text-align: justify; color: red; font-size: 16px;'>
+    {html_content}
+    </div>
+    """, unsafe_allow_html=True)
+
+#    if st.button('close',key='close_simplex',help='return to video'):
+#      st.session_state['show_simplex_text'] = False
+#      with open('simplex_manual.html', 'r', encoding='utf-8') as file:
+#        simplex_html = file.read()
+#      st.markdown(simplex_html, unsafe_allow_html=True)
 
 #    st.markdown('''
 #        <div style='height: 650px; overflow-y: auto; background-color: white; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; text-align: justify; color: red; font-size: 16px;'>
