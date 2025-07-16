@@ -15,7 +15,7 @@ a₁₁x₁ + a₁₂x₂ + ... + a₁ₙxₙ ≤ b₁<br>
 aₘ₁x₁ + aₘ₂x₂ + ... + aₘₙxₙ ≤ bₘ<br>
 x₁, x₂, ..., xₙ ≥ 0</p>
 <p>
-where,
+  where,
   <ul>
     <li>the variables x₁, x₂, ..., xₙ are called decision variables</li>
     <li>the constants cj are the coefficients of the objective function</li>
@@ -25,8 +25,12 @@ where,
 This formulation is well-suited for applying the Simplex method, as it enables a systematic transformation of the problem into tableau format and facilitates organized data processing.
 </p>
 
-<h3>2.2 Feasible Region and Vertices</h3>
-<p>The set of all possible solutions that satisfy the constraints is called the feasible region. Geometrically, it is a convex polyhedron formed by the intersection of the constraint inequalities. Each vertex (or corner point) of this region corresponds to a basic feasible solution.</p>
+<h3>2.2. Conversion to Standard Form</h3>
+<p>In order for a linear programming problem to be solved using the Simplex method, it must first be expressed in standard form. This form requires that all constraints are written as equalities, and all variables are non-negative.
+Since most real-world constraints are expressed as inequalities of the form "less than or equal to" (≤), the conversion is performed by introducing slack variables.</p>
+<p>For example, the constraint: x₁+2x₂≤6 is transformed into the equivalent equation: x₁+2x₂+s₁=6, where s₁ is the slack variable, with s₁≥0.</p>
+<p>The same procedure is applied to each constraint of the ≤ type, adding a different slack variable to each. In this way, the system of inequalities becomes an equivalent system of equations, enabling the construction of the initial Simplex tableau.</p>
+<p>This transformation preserves the equivalence with the original problem while ensuring that all necessary conditions for the application of the method are met.</p>
 
 <h3>2.3 Optimality Principle</h3>
 <p>The Simplex method works by moving from one vertex to another along the edges of the feasible region, always improving (or at least not worsening) the objective function. Due to the convexity of the feasible region and the linearity of the objective function, if a maximum exists, it will occur at one of these vertices.</p>
