@@ -24,7 +24,6 @@ with col1:
   if not st.session_state['show_simplex_text']: #*#
     st.video('./video-0.mp4') #*#
   else:
-    else:
     if st.button('close', key='close_simplex', help='return to video'):
         st.session_state['show_simplex_text'] = False
 
