@@ -5,17 +5,25 @@
 <p>The Simplex algorithm, developed by George Dantzig in 1947, is the fundamental method for solving linear programming problems. It operates by moving from vertex to vertex along the feasible region of solutions, searching for the optimum. Despite its conceptual simplicity, the Simplex method has proven to be highly efficient in practice and is applied in a wide range of contexts—from production planning and transportation optimization to financial portfolio allocation and energy management.</p>
 <p>The purpose of this manual is twofold: first, to present the theoretical foundations of the Simplex method with clarity and an educational perspective; and second, to support the development and application of a functional computational tool, implemented within the GBO-solutions platform. Through detailed examples and step-by-step explanations, the reader will not only gain a deep understanding of the methodology, but also acquire a complete and reliable means for solving practical linear maximization problems.</p>
 
-<h2>Chapter 2: Theoretical Background</h2>
-
-<h3>2.1 Standard Form of a Linear Programming Problem</h3>
-<p>A linear programming (LP) problem aims to optimize (maximize or minimize) a linear objective function, subject to a set of linear inequality or equality constraints. The standard form of a maximization LP problem can be written as:</p>
+<h2>2. Theory of Simplex</h2>
+<h3>2.1. Standard Form of a Linear Programming Problem</h3>
+<p>Linear programming is a mathematical optimization methodology aimed at determining the best possible value of a linear objective function, given a set of linear constraints. Such problems can be precisely described using systems of equations and inequalities. The general standard form of a linear programming problem is formulated as follows:</p>
 <p><em>Maximize</em> z = c₁x₁ + c₂x₂ + ... + cₙxₙ<br>
 <em>subject to:</em><br>
 a₁₁x₁ + a₁₂x₂ + ... + a₁ₙxₙ ≤ b₁<br>
 ...<br>
 aₘ₁x₁ + aₘ₂x₂ + ... + aₘₙxₙ ≤ bₘ<br>
 x₁, x₂, ..., xₙ ≥ 0</p>
-<p>This form assumes that all variables are non-negative, and all constraints are of the "less than or equal to" type.</p>
+<p>
+where,
+  <ol type='*'>
+    <li>the variables x1,x2,...,xn are called decision variables</li>
+    <li>the constants cj are the coefficients of the objective function</li>
+    <li>the coefficients aij define the linear constraints of the problem</li>
+    <li>and bi represent the right-hand side values of the constraints</li>
+  </ol>ol>
+This formulation is well-suited for applying the Simplex method, as it enables a systematic transformation of the problem into tableau format and facilitates organized data processing.
+</p>
 
 <h3>2.2 Feasible Region and Vertices</h3>
 <p>The set of all possible solutions that satisfy the constraints is called the feasible region. Geometrically, it is a convex polyhedron formed by the intersection of the constraint inequalities. Each vertex (or corner point) of this region corresponds to a basic feasible solution.</p>
