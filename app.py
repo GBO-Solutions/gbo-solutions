@@ -29,7 +29,7 @@ with col1:
       st.session_state['show_simplex_text'] = False
       with open('simplex_manual.html', 'r', encoding='utf-8') as file:
         simplex_html = file.read()
-      st.markdown(simplex_html, )#unsafe_allow_html=True)
+      st.markdown(simplex_html, unsafe_allow_html=True)
 
 #    st.markdown('''
 #        <div style='height: 650px; overflow-y: auto; background-color: white; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; text-align: justify; color: red; font-size: 16px;'>
