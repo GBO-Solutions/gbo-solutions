@@ -111,35 +111,30 @@
   </div>
 
 <h3>Chapter 3: Numerical Example (Step-by-Step Solution)</h3>
-<div>
   <style>
-  /* Στυλ για καθαρούς πίνακες με γραμμές */
   table.simplex-table { border-collapse: collapse; width: 100%; text-align: center; margin: 0.75rem 0; }
   table.simplex-table th, table.simplex-table td { border: 1px solid #999; padding: 6px; }
-
-  /* Επισημάνσεις */
-  .pivot-col  { background: #fff3cd; font-weight: bold; } /* κίτρινο φόντο στη στήλη */
-  .pivot-row  { background: #ffeeba; }                    /* απαλό κίτρινο στη γραμμή */
+  .pivot-col  { background: #fff3cd; font-weight: bold; }
+  .pivot-row  { background: #ffeeba; }
   .pivot-cell { outline: 3px dashed #d00; background: #fff3cd; font-weight: 900; }
-
-  /* Βοηθητικό για μικρό κείμενο επεξήγησης */
   .note { font-size: 0.95em; }
   </style>
+
+  <div>
+  <h5>Chapter 3.1 – Solving a Linear Programming Problem Using the Simplex Method (Step-by-Step)</h5>
+    <p>In this section, we present a detailed application of the Simplex method to a specific linear programming problem. The aim is to demonstrate how the method proceeds step by step and how each operation contributes to identifying the optimal solution.</p>
+    <h7>Problem Statement</h7>
+    <p><strong>Maximize</strong> z = 3x₁ + 5x₂</p>
+    <p><strong>Subject to</strong>:</p>
+    <ul>
+      <li>x₁ + 2x₂ ≤ 8</li>
+      <li>3x₁ + 2x₂ ≤ 12</li>
+      <li>x₁ + x₂ ≤ 5</li>
+      <li>x₁, x₂ ≥ 0</li>
+    </ul>
   
-  <h2>Chapter 3.1 – Solving a Linear Programming Problem Using the Simplex Method (Step-by-Step)</h2>
-  <p>In this section, we present a detailed application of the Simplex method to a specific linear programming problem. The aim is to demonstrate how the method proceeds step by step and how each operation contributes to identifying the optimal solution.</p>
-  <h3>Problem Statement</h3>
-  <p><strong>Maximize</strong> z = 3x₁ + 5x₂</p>
-  <p><strong>Subject to</strong>:</p>
-  <ul>
-    <li>x₁ + 2x₂ ≤ 8</li>
-    <li>3x₁ + 2x₂ ≤ 12</li>
-    <li>x₁ + x₂ ≤ 5</li>
-    <li>x₁, x₂ ≥ 0</li>
-  </ul>
-  
-  <h3>Step 1: Convert to Standard Form</h3>
-  <p>Introduce slack variables s₁, s₂, s₃ to convert inequalities to equalities:</p>
+    <h3>Step 1: Convert to Standard Form</h3>
+    <p>Introduce slack variables s₁, s₂, s₃ to convert inequalities to equalities:</p>
   <ul>
     <li>x₁ + 2x₂ + s₁ = 8</li>
     <li>3x₁ + 2x₂ + s₂ = 12</li>
