@@ -121,9 +121,8 @@
   </style>
 
   <div>
-  <h5>Chapter 3.1 – Solving a Linear Programming Problem Using the Simplex Method (Step-by-Step)</h5>
     <p>In this section, we present a detailed application of the Simplex method to a specific linear programming problem. The aim is to demonstrate how the method proceeds step by step and how each operation contributes to identifying the optimal solution.</p>
-    <h7>Problem Statement</h7>
+    <h5>Problem Statement</h5>
     <p><strong>Maximize</strong> z = 3x₁ + 5x₂</p>
     <p><strong>Subject to</strong>:</p>
     <ul>
@@ -133,145 +132,145 @@
       <li>x₁, x₂ ≥ 0</li>
     </ul>
   
-    <h3>Step 1: Convert to Standard Form</h3>
+    <h5>Step 1: Convert to Standard Form</h5>
     <p>Introduce slack variables s₁, s₂, s₃ to convert inequalities to equalities:</p>
-  <ul>
-    <li>x₁ + 2x₂ + s₁ = 8</li>
-    <li>3x₁ + 2x₂ + s₂ = 12</li>
-    <li>x₁ + x₂ + s₃ = 5</li>
-  </ul>
-  <p>Objective: z − 3x₁ − 5x₂ = 0</p>
+    <ul>
+      <li>x₁ + 2x₂ + s₁ = 8</li>
+      <li>3x₁ + 2x₂ + s₂ = 12</li>
+      <li>x₁ + x₂ + s₃ = 5</li>
+    </ul>
+    <p>Objective: z − 3x₁ − 5x₂ = 0</p>
   
-  <h3>Step 2: Initial Simplex Tableau</h3>
-  <table class="simplex-table">
-  <tr style="background:#f2f2f2;">
-  <th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>s₃</th><th>RHS</th>
-  </tr>
-  <tr class="pivot-row">
-  <td>1</td><td class="pivot-cell">2</td><td>1</td><td>0</td><td>0</td><td>8</td>
-  </tr>
-  <tr>
-  <td>3</td><td class="pivot-col">2</td><td>0</td><td>1</td><td>0</td><td>12</td>
-  </tr>
-  <tr>
-  <td>1</td><td class="pivot-col">1</td><td>0</td><td>0</td><td>1</td><td>5</td>
-  </tr>
-  <tr>
-  <td>-3</td><td class="pivot-col">-5</td><td>0</td><td>0</td><td>0</td><td>0</td>
-  </tr>
-  </table>
-  <p class="note"><em>Entering variable:</em> x₂ (most negative in z-row: −5). <em>Ratio test:</em> 8/2 = 4, 12/2 = 6, 5/1 = 5 → <strong>pivot row: R1 (minimum 4)</strong>. Slack s₁ leaves; x₂ enters.</p>
-  
-  <h3>Step 3: First Pivot (Column x₂, Row R1)</h3>
-  
-  <h4>Step 3.1 – Normalize the pivot row (R1 ← R1 / 2)</h4>
-  <table class="simplex-table">
-  <tr style="background:#f2f2f2;">
+    <h5>Step 2: Initial Simplex Tableau</h5>
+    <table class="simplex-table">
+    <tr style="background:#f2f2f2;">
     <th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>s₃</th><th>RHS</th>
-  </tr>
-  <tr class="pivot-row">
-    <td>1/2</td><td class="pivot-cell">1</td><td>1/2</td><td>0</td><td>0</td><td>4</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr class="pivot-row">
+    <td>1</td><td class="pivot-cell">2</td><td>1</td><td>0</td><td>0</td><td>8</td>
+    </tr>
+    <tr>
     <td>3</td><td class="pivot-col">2</td><td>0</td><td>1</td><td>0</td><td>12</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>1</td><td class="pivot-col">1</td><td>0</td><td>0</td><td>1</td><td>5</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>-3</td><td class="pivot-col">-5</td><td>0</td><td>0</td><td>0</td><td>0</td>
-  </tr>
-  </table>
-
-<h4>Step 3.2 – Eliminate x₂ from other rows</h4>
-<p class="note">R2 ← R2 − 2·R1, R3 ← R3 − 1·R1, z-row ← z-row + 5·R1.</p>
-<table class="simplex-table">
-  <tr style="background:#f2f2f2;">
+    </tr>
+    </table>
+    <p class="note"><em>Entering variable:</em> x₂ (most negative in z-row: −5). <em>Ratio test:</em> 8/2 = 4, 12/2 = 6, 5/1 = 5 → <strong>pivot row: R1 (minimum 4)</strong>. Slack s₁ leaves; x₂ enters.</p>
+  
+    <h5>Step 3: First Pivot (Column x₂, Row R1)</h5>
+  
+    <h5>Step 3.1 – Normalize the pivot row (R1 ← R1 / 2)</h5>
+    <table class="simplex-table">
+    <tr style="background:#f2f2f2;">
     <th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>s₃</th><th>RHS</th>
-  </tr>
-  <tr class="pivot-row">
+    </tr>
+    <tr class="pivot-row">
+    <td>1/2</td><td class="pivot-cell">1</td><td>1/2</td><td>0</td><td>0</td><td>4</td>
+    </tr>
+    <tr>
+    <td>3</td><td class="pivot-col">2</td><td>0</td><td>1</td><td>0</td><td>12</td>
+    </tr>
+    <tr>
+    <td>1</td><td class="pivot-col">1</td><td>0</td><td>0</td><td>1</td><td>5</td>
+    </tr>
+    <tr>
+    <td>-3</td><td class="pivot-col">-5</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    </table>
+
+    <h5>Step 3.2 – Eliminate x₂ from other rows</h5>
+    <p class="note">R2 ← R2 − 2·R1, R3 ← R3 − 1·R1, z-row ← z-row + 5·R1.</p>
+    <table class="simplex-table">
+    <tr style="background:#f2f2f2;">
+    <th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>s₃</th><th>RHS</th>
+    </tr>
+    <tr class="pivot-row">
     <td>1/2</td><td class="pivot-col">1</td><td>1/2</td><td>0</td><td>0</td><td>4</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>2</td><td>0</td><td>-1</td><td>1</td><td>0</td><td>4</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>1/2</td><td>0</td><td>-1/2</td><td>0</td><td>1</td><td>1</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>-1/2</td><td>0</td><td>5/2</td><td>0</td><td>0</td><td>20</td>
-  </tr>
-</table>
+    </tr>
+    </table>
 
-<h3>Step 4: Second Pivot (Entering x₁)</h3>
-<p class="note"><em>Reduced costs:</em> z-row has −1/2 at x₁ → x₁ enters. <em>Ratio test on x₁ &gt; 0:</em> R1: 4 / (1/2) = 8, R2: 4 / 2 = 2, R3: 1 / (1/2) = 2 → choose <strong>R2</strong> (tie broken by rule).</p>
+    <h5>Step 4: Second Pivot (Entering x₁)</h5>
+    <p class="note"><em>Reduced costs:</em> z-row has −1/2 at x₁ → x₁ enters. <em>Ratio test on x₁ &gt; 0:</em> R1: 4 / (1/2) = 8, R2: 4 / 2 = 2, R3: 1 / (1/2) = 2 → choose <strong>R2</strong> (tie broken by rule).</p>
 
-<h4>Step 4.1 – Normalize pivot row (R2 ← R2 / 2)</h4>
-<table class="simplex-table">
-  <tr style="background:#f2f2f2;">
+    <h5>Step 4.1 – Normalize pivot row (R2 ← R2 / 2)</h5>
+    <table class="simplex-table">
+    <tr style="background:#f2f2f2;">
     <th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>s₃</th><th>RHS</th>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>1/2</td><td>1</td><td>1/2</td><td>0</td><td>0</td><td>4</td>
-  </tr>
-  <tr class="pivot-row">
+    </tr>
+    <tr class="pivot-row">
     <td class="pivot-cell">1</td><td>0</td><td>-1/2</td><td>1/2</td><td>0</td><td>2</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>1/2</td><td>0</td><td>-1/2</td><td>0</td><td>1</td><td>1</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>-1/2</td><td>0</td><td>5/2</td><td>0</td><td>0</td><td>20</td>
-  </tr>
-</table>
+    </tr>
+    </table>
 
-<h4>Step 4.2 – Eliminate x₁ from other rows</h4>
-<p class="note">R1 ← R1 − (1/2)·R2, R3 ← R3 − (1/2)·R2, z-row ← z-row + (1/2)·R2.</p>
-<table class="simplex-table">
-  <tr style="background:#f2f2f2;">
+    <h5>Step 4.2 – Eliminate x₁ from other rows</h5>
+    <p class="note">R1 ← R1 − (1/2)·R2, R3 ← R3 − (1/2)·R2, z-row ← z-row + (1/2)·R2.</p>
+    <table class="simplex-table">
+    <tr style="background:#f2f2f2;">
     <th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>s₃</th><th>RHS</th>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>0</td><td>1</td><td>3/4</td><td>-1/4</td><td>0</td><td>3</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>1</td><td>0</td><td>-1/2</td><td>1/2</td><td>0</td><td>2</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>0</td><td>0</td><td>-1/4</td><td>-1/4</td><td>1</td><td>0</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>0</td><td>0</td><td>9/4</td><td>1/4</td><td>0</td><td>21</td>
-  </tr>
-</table>
+    </tr>
+    </table>
 
-<h3>Final Tableau (Optimal)</h3>
-<table class="simplex-table">
-  <tr style="background:#f2f2f2;">
+    <h5>Final Tableau (Optimal)</h5>
+    <table class="simplex-table">
+    <tr style="background:#f2f2f2;">
     <th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>s₃</th><th>RHS</th>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>0</td><td>1</td><td>3/4</td><td>-1/4</td><td>0</td><td>3</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>1</td><td>0</td><td>-1/2</td><td>1/2</td><td>0</td><td>2</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>0</td><td>0</td><td>-1/4</td><td>-1/4</td><td>1</td><td>0</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>0</td><td>0</td><td>9/4</td><td>1/4</td><td>0</td><td>21</td>
-  </tr>
-</table>
+    </tr>
+    </table>
 
-<h3>Conclusion</h3>
-<ul>
-  <li>x₁ = 2</li>
-  <li>x₂ = 3</li>
-  <li>z = 21</li>
-</ul>
-<p class="note">The result matches the output of <code>gbo_simplex</code>.</p>
-</div>
+    <h5>Conclusion</h5>
+    <ul>
+      <li>x₁ = 2</li>
+      <li>x₂ = 3</li>
+      <li>z = 21</li>
+    </ul>
+    <p class="note">The result matches the output of <code>gbo_simplex</code>.</p>
+  </div>
 
 <h3>4. Code Overview and Usage</h3>
   <div>
