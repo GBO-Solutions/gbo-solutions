@@ -246,6 +246,32 @@
   </tr>
   </table>
 
+  <h5>Final Tableau (Optimal)</h5>
+  <table class="simplex-table">
+  <tr style="background:#f2f2f2;">
+    <th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>s₃</th><th>RHS</th>
+  </tr>
+  <tr>
+    <td>0</td><td>1</td><td>3/4</td><td>-1/4</td><td>0</td><td>3</td>
+  </tr>
+  <tr>
+    <td>1</td><td>0</td><td>-1/2</td><td>1/2</td><td>0</td><td>2</td>
+  </tr>
+  <tr>
+    <td>0</td><td>0</td><td>-1/4</td><td>-1/4</td><td>1</td><td>0</td>
+  </tr>
+  <tr>
+    <td>0</td><td>0</td><td>9/4</td><td>1/4</td><td>0</td><td>21</td>
+  </tr>
+  </table>
+
+  <h5>Conclusion</h5>
+  <ul>
+    <li>x₁ = 2</li>
+    <li>x₂ = 3</li>
+    <li>z = 21</li>
+  </ul>
+  <p class="note">The result matches the output of <code>gbo_simplex</code>.</p>
 
 
 <h3>4. Code Overview and Usage</h3>
