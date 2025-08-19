@@ -164,7 +164,81 @@
   <p class="note"><em>Entering variable:</em> x₂ (most negative in z-row: −5). <em>Ratio test:</em> 8/2 = 4, 12/2 = 6, 5/1 = 5 → <strong>pivot row: R1 (minimum 4)</strong>. Slack s₁ leaves; x₂ enters.</p>
 
   <h5>Step 3: First Pivot (Column x₂, Row R1)</h5>
+<!-- Chapter 3.1 – Simplex Example (detailed) -->
+<style>
+  table.simplex-table { border-collapse: collapse; width: 100%; text-align: center; margin: 1rem 0; }
+  table.simplex-table th, table.simplex-table td { border: 1px solid #999; padding: 6px; }
+  .pivot-col  { background: #fff3cd; font-weight: bold; }
+  .pivot-row  { background: #ffeeba; }
+  .pivot-cell { outline: 3px dashed #d00; background: #fff3cd; font-weight: 900; }
+  .note { font-size: 0.95em; }
+</style>
 
+<h2>Chapter 3.1 – Solving a Linear Programming Problem with the Simplex Method (Step-by-Step)</h2>
+
+<h3>Problem Statement</h3>
+<p><strong>Maximize</strong> z = 2x₁ + 3x₂</p>
+<p><strong>Subject to:</strong></p>
+<ul>
+  <li>5x₁ + 4x₂ ≤ 32</li>
+  <li>x₁ + 2x₂ ≤ 10</li>
+  <li>x₁, x₂ ≥ 0</li>
+</ul>
+
+<hr>
+
+<h3>Tableau-00 (Initial)</h3>
+<table class="simplex-table">
+  <tr><th></th><th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>RHS</th></tr>
+  <tr><td><strong>s₁</strong></td><td>5</td><td class="pivot-col">4</td><td>1</td><td>0</td><td>32</td></tr>
+  <tr class="pivot-row"><td><strong>s₂</strong></td><td>1</td><td class="pivot-cell">2</td><td>0</td><td>1</td><td>10</td></tr>
+  <tr><td><strong>Zj</strong></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+  <tr><td><strong>Cj−Zj</strong></td><td>2</td><td class="pivot-col">3</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
+<p class="note">The most positive value in row Cj−Zj is at <strong>x₂</strong> (3), hence x₂ enters the basis. 
+By the ratio test (32/4 = 8, 10/2 = 5), the pivot row is <strong>s₂</strong>. 
+Therefore, s₂ leaves and x₂ enters the basis.</p>
+
+<hr>
+
+<h3>Tableau-01 (After First Pivot)</h3>
+<table class="simplex-table">
+  <tr><th></th><th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>RHS</th></tr>
+  <tr><td><strong>s₁</strong></td><td>3</td><td>0</td><td>1</td><td>-2</td><td>12</td></tr>
+  <tr class="pivot-row"><td><strong>x₂</strong></td><td>0.5</td><td class="pivot-cell">1</td><td>0</td><td>0.5</td><td>5</td></tr>
+  <tr><td><strong>Zj</strong></td><td>1.5</td><td>3</td><td>0</td><td>1.5</td><td>15</td></tr>
+  <tr><td><strong>Cj−Zj</strong></td><td class="pivot-col">0.5</td><td>0</td><td>0</td><td>-1.5</td><td>0</td></tr>
+</table>
+<p class="note">Now x₂ is in the basis. Since Cj−Zj still has a positive value at <strong>x₁ (0.5)</strong>, 
+the algorithm continues. The next pivot column is x₁.</p>
+
+<hr>
+
+<h3>Tableau-02 (Optimal)</h3>
+<table class="simplex-table">
+  <tr><th></th><th>x₁</th><th>x₂</th><th>s₁</th><th>s₂</th><th>RHS</th></tr>
+  <tr class="pivot-row"><td><strong>x₁</strong></td><td class="pivot-cell">1</td><td>0</td><td>1/3</td><td>-2/3</td><td>4</td></tr>
+  <tr><td><strong>x₂</strong></td><td>0</td><td>1</td><td>-1/3</td><td>2/3</td><td>3</td></tr>
+  <tr><td><strong>Zj</strong></td><td>2</td><td>3</td><td>0</td><td>0</td><td>17</td></tr>
+  <tr><td><strong>Cj−Zj</strong></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
+<p class="note">At this stage, all entries in Cj−Zj are non-positive. This means that optimality has been reached. 
+The solution is x₁ = 4, x₂ = 3, with an objective value z = 17.</p>
+
+<hr>
+
+<h3>Conclusion</h3>
+<p>The step-by-step application of the Simplex method shows how the basis variables are updated 
+and how the tableau evolves until all reduced costs are non-positive. 
+The final solution obtained is:</p>
+<ul>
+  <li>x₁ = 4</li>
+  <li>x₂ = 3</li>
+  <li>z = 17</li>
+</ul>
+<p class="note">This matches the output of the <code>gbo_simplex</code> implementation for this example.</p>
+
+'''
   <h5>Step 3.1 – Normalize the pivot row (R1 ← R1 / 2)</h5>
   <table class="simplex-table">
   <tr style="background:#f2f2f2;">
@@ -203,7 +277,7 @@
     <td>-1/2</td><td>0</td><td>5/2</td><td>0</td><td>0</td><td>20</td>
   </tr>
   </table>
-
+'''
   <h5>Step 4: Second Pivot (Entering x₁)</h5>
   <p class="note"><em>Reduced costs:</em> z-row has −1/2 at x₁ → x₁ enters. <em>Ratio test on x₁ &gt; 0:</em> R1: 4 / (1/2) = 8, R2: 4 / 2 = 2, R3: 1 / (1/2) = 2 → choose <strong>R2</strong> (tie broken by rule).</p>
 
